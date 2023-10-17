@@ -176,10 +176,16 @@ button {
     }
 }
 
-.map h2, .row h2, .quiz-box h2, .acor-container h2 {
+.map h2, .row h2, .quiz-box h2, .acor-container h2, .next h2 {
     font-family: 'Montserrat',sans-serif;
     text-align: center;
     font-size: 20px;
+}
+
+.next h2 a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
 }
   
 .row {
@@ -195,7 +201,29 @@ button {
     justify-content: center;
 }
 
+.purpose {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+    align-items: center;
+    background-color: rgb(207, 207, 207);
+    padding: 50px 0;
+    }
 
+.pur-item {
+    display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+    margin: 0% 5%;
+	height: 30%;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.map {
+    padding: 50px 0;
+}
 
 .column_f {
     display: flex;
