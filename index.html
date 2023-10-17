@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Инжинириум МГТУ им. Н.Э. Баумана - Курсы для детей и школьников</title>
+<meta property="og:title" content="Инжинириум МГТУ им. Н.Э. Баумана - Курсы для детей и школьников">
+<meta name="Description" content="Курсы для детей и школьников в центре инновационного творчества и технопарке Инжинириум МГТУ им. Н.Э. Баумана: робототехника, 3d-моделирование, курс молодого инженера, программирование, ракетостроение, биомедицинские технологии, аэро, промышленный дизайн, схемотехника, инженерная графика">
+<meta property="og:title" content="Курсы для детей и школьников в центре инновационного творчества и технопарке Инжинириум МГТУ им. Н.Э. Баумана: робототехника, 3d-моделирование, курс молодого инженера, программирование, ракетостроение, биомедицинские технологии, аэро, промышленный дизайн, схемотехника, инженерная графика">
+<link href="/examples/libs/ui-components/itc-slider/itc-slider.css" rel="stylesheet">
+<script src="/examples/libs/ui-components/itc-slider/itc-slider.js" defer></script>
+<link rel="stylesheet" href="./styles/style.css">
+<body>
+<header class="site-header">
+    <div class="column">
+        <div class="column-item">
+            <h1>ЦЕНТР МОЛОДЕЖНОГО ИННОВАЦИОННОГО ТВОРЧЕСТВА И ТЕХНОПАРК</h1>
+                <p>Лицензия на осуществление образовательной деятельности № 040350 от 25.09.2019</p>
+        </div>
+        <div class="column-item">
+            <button class="button" type="button">ЗАПИСАТЬСЯ</button>
+        </div>
+    </div>
+    
+    <nav class="site-nav">
+        <ul>
+            <li><img src="img/logo.png" alt="Инжинириум МГТУ им. Н.Э. Баумана"></li>
+            <li><a href="#">О НАС</a></li>
+            <li><a href="#">КУРСЫ</a></li>
+            <li><a href="#">МАСТЕР-КЛАССЫ</a></li>
+            <li><a href="#">ТЕХНОПАРКИ</a></li>
+            <li><a href="#">ЛАГЕРЯ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+            <li><a class="menu-phone" href="tel:+74951209975">+7 (495) 120-99-75</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+    <div class="slider">
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <img src="img/intensiv.png" alt="">
+            <div class="item_col">
+               <h2>ОТКРЫТ НАБОР НА БЕСПЛАТНЫЕ КУРСЫ ПРОГРАММИРОВАНИЯ В РАМКАХ ПРОЕКТА "КОД БУДУЩЕГО"</h2>
+               <button class="btn">ПОДРОБНЕЕ</button>
+            </div>           
+            
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <img src="img/owl.png" alt="">
+            <div class="item_col">
+               <h2>ОТКРЫТА ЗАПИСЬ НА НОВЫЙ УЧЕБНЫЙ ГОД</h2>
+               <h3>для детей от 5 до 18 лет</h3> 
+               <button class="btn">ПОДРОБНЕЕ </button>
+            </div>           
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <img src="img/msc.png" alt="">
+            <div class="item_col">
+               <h2>ОПЛАТА ОБУЧЕНИЯ МАТЕРИНСКИМ КАПИТАЛОМ</h2>
+               <h3>В МГТУ ИМ. Н.Э. БАУМАНА</h3> 
+               <button class="btn">ПОДРОБНЕЕ</button>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+        <div class="item">
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <img src="img/calc.png" alt="">
+            <div class="item_col">
+               <h2>СУПЕР-КАЛЬКУЛЯТОР ДЛЯ РАСЧЕТА СКИДКИ</h2>
+               <h3>Теперь Вы можете рассчитать скидку самостоятельно</h3> 
+               <button class="btn">ПОДРОБНЕЕ</button>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        
+        <div class="arrow_mobile">
+            <a class="previous_mobile" onclick="previousSlide()">&#10094;</a>
+            <a class="next_mobile" onclick="nextSlide()">&#10095;</a>
+        </div>
+        
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function nextSlide() {
+           showSlides(slideIndex += 1);
+        }
+        function previousSlide() {
+           showSlides(slideIndex -= 1);  
+        }
+
+        function currentSlide(n) {
+           showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+           let slides = document.getElementsByClassName("item");
+            if (n > slides.length) {
+               slideIndex = 1
+            }
+            if (n < 1) {
+               slideIndex = slides.length
+            }
+            for (let slide of slides) {
+               slide.style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "flex";    
+        }
+    </script>
+    
+
+    <div class="row">
+        <div class="h2">
+            <h2>СТУПЕНИ ОБУЧЕНИЯ</h2>
+        </div>
+        <img src="img/step1.png" alt=""><img src="img/step2.png" alt=""><img src="img/step3.png" alt=""><img src="img/step4.png" alt=""><img src="img/step5.png" alt="">
+    </div>
+   
+    <div class="quiz-box" id="quiz">
+        <div class="h2">
+            <h2>ПРОВЕРЬ СЕБЯ</h2>
+        </div> 
+        <div class="quiz-header">
+            <h2 id="question">Question text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Question</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Question</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Question</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">Далее</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    
+    <div class="map">    
+    <div class="h2">
+        <h2>УЧЕБНЫЕ ЦЕНТРЫ ИНЖИНИРИУМ МГТУ ИМ. Н.Э.БАУМАНА</h2>
+    </div>      
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A46ac1ba9df54a5c4541e4911a8510cb9c848d607f57f3c70588b37e33c77d83f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+</main>
+
+    <footer class="site-footer">
+        <div class="column_f">
+            <div class="column-item_f">
+                <nav class="site-nav-footer">
+                    <ul>
+                        <li><a href="#">О НАС</a></li>
+                        <li><a href="#">Цены и скидки</a></li>
+                        <li><a href="#">Ответы на частые вопросы</a></li>
+                        <li><a href="#">Преподаватели</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">При поддержке</a></li>                        
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">СМИ о нас</a></li>
+                        <li><a href="#">Фирменный стиль</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="column-item_f">
+                <nav class="site-nav-footer">
+                    <ul>
+                        <li><a href="#">КУРСЫ</a></li>
+                        <li><a href="#">Дошкольники</a></li>
+                        <li><a href="#">1-4 класс</a></li>
+                        <li><a href="#">5-8 класс</a></li>
+                        <li><a href="#">9-11 класс</a></li>
+                        <li><a href="#">Онлайн</a></li>                        
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Мастер-классы</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="column-item_f">
+                <nav class="site-nav-footer">
+                    <ul>
+                        <li><a href="#">ТЕХНОПАРКИ</a></li>
+                        <li><a href="#">О технопарках</a></li>
+                        <li><a href="#">ЦМИТ</a></li>
+                        <li><a href="#">Работа со студентами</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="column-item_f">
+                            <nav class="site-nav-footer">
+                                <ul>
+                                    <li><a href="#">ФИЛИАЛЫ</a></li>
+                                    <li><a href="#">ЛАГЕРЯ</a></li>
+                                    <li><a href="#">ДОКУМЕНТЫ</a></li>
+                                    <li><a href="#">ФРАНШИЗА</a></li>
+                                </ul>
+                            </nav>
+             </div>
+
+            <div class="column-item_f">
+                <nav class="site-nav-footer">
+                    <ul>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                        <li>Телефон: <a href="tel:+74951209975">+74951209975</a></li>
+                        <li>Для СМИ: <a href="mailto:press@emtc.ru">press@emtc.ru</a></li>
+                        <li>Хотите работать у нас?<br><a href="mailto:a@inginirium.ru">a@inginirium.ru</a></li>
+                        <li><a href="#"><img src="img/vk--icon.png" alt=""></a><a href="#"> <img src="img/yt.png" alt=""></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+</footer>
+
+</body>
+</html>
